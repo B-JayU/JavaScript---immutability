@@ -1,0 +1,9 @@
+Primitive (원자 데이터 타입)
+	- Number / String / Boolean / Null / Undefined / Symbol
+
+
+Object (객체 : 포괄적인 개념)
+	- Object / Array / Function
+	- Array : 순서대로 데이터를 정리정돈 한다는 특성이 추가된 객체
+	- Function : 자바스크립트에서는 함수도 값으로 가질 수 있는 객체
+	
