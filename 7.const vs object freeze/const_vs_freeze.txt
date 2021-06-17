@@ -1,0 +1,8 @@
+const o1 = {name:'kim'}
+// const 는 o1이 지칭하는 대상이 바뀌지 못하도록 방지
+
+Object.freeze(o1);
+// o1이 지칭하는 객체의 property 값을 변경하지 못하도록 방지 (다만, 이는 primitive property에 한함.)
+
+const o2 = {name:'kim'}
+o1 = o2;
