@@ -1,0 +1,33 @@
+<primitive type>
+<Before>
+<code>		<name>			<value>
+var p1 = 1;	   p1   --------------->    1
+var p2 = 1; 	   p2   -------------/
+var p3 = p1;	   p3	----------/
+
+<After>
+<code>		<name>			<value>
+var p1 = 1;	   p1   --------------->    1
+var p2 = 1; 	   p2   -------------/
+var p3 = 2;	   p3	--------------->    2
+
+primitive 타입의 경우, 변수 값이 변경되면 새로운 값을 생성하고 지칭하게 된다. 
+
+
+
+<Object>
+<Before>
+<code>				<name>			<value>
+var o1 = {name:'kim'}		  o1	------------->  {name:'kim'}<--|  
+var o2 = {name:'kim'}		  o2	------------->  {name:'kim'}   |
+var o3 = o1;			  o3	-------------------------------|	
+
+<After>
+<code>				<name>			<value>
+var o1 = {name:'kim'}		  o1	------------->  {name:'lee'}<--|  
+var o2 = {name:'kim'}		  o2	------------->  {name:'kim'}   |
+var o3 = o1;			  o3	-------------------------------|
+o3.name = 'lee';
+
+객체의 경우, 객체의 property가 변경되면 변경된 proprerty를 반영하는 새로운 객체를 생성하는 것이 아니라
+현재 지칭하고 있는 객체의 property 값을 변경시켜 버린다. 따라서 이를 참조하는 모든 객체의 property가 변경되는 효과를 낳는다. 
